@@ -19,7 +19,7 @@ for(let i = HEIGHT - 1; i >= 0; i--) {
 	}
 }
 
-// Create Black Line. 
+// Create Black Line by Bresenham Algorithm.  
 
 content = `${template}${triplet}`;
 
