@@ -1,6 +1,6 @@
 import { FORMAT, WIDTH, HEIGHT, MAX_COLOR } from './config/Config';
 import { Template } from './template/Template';
-import { Exporter } from './lib/Exporter';
+import { PPMExporter } from './lib/PPMExporter';
 
 import { RangeArray } from './lib/RangeArray';
 
@@ -23,6 +23,6 @@ for(let i = HEIGHT - 1; i >= 0; i--) {
 
 content = `${template}${triplet}`;
 
-Exporter('blank_canvas', content); 
+PPMExporter('blank_canvas', content); 
 
 
