@@ -11,6 +11,7 @@ let gValue;
 let bValue;
 let triplet = '';
 
+// Create White Canvas. 
 for(let i = HEIGHT - 1; i >= 0; i--) {
 	for(let j = 0; j < WIDTH; j++) {
 		rValue = 255;
