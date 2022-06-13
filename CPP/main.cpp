@@ -8,8 +8,8 @@ int main()
 	const int HEIGHT = 256;
 
 	// Set the output file. 
-	// std::ofstream fout("output/output.ppm");
-	std::ofstream fout("log/output.txt");
+	std::ofstream fout("output/ppm/output.ppm");
+	// std::ofstream fout("log/output.txt");
 
 	// Catch Event When the file writting is failed. 
 	if(fout.fail()) return -1; // Return Error. 
