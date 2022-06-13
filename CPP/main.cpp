@@ -6,6 +6,13 @@
 // #include "lib/color3.h"
 // #include "lib/vec3.h"
 
+void color_converter(std::ofstream fout, int red_limit, int green_limit, int blue_limit)
+{
+	fout << rand() % red_limit << " "; // Red Value. 
+	fout << rand() % green_limit << " "; // Green Value.  
+	fout << rand() % blue_limit << "  "; // Blue Value. 
+} 
+
 int main()
 {
 	// Set Image Size. This is the size of the image that will be created.
@@ -13,7 +20,7 @@ int main()
 	const int WIDTH = 800;
 	const int HEIGHT = 600;
 	const int MAX_COLOR = 255;
-	const std::string FILENAME = "output_09"; 
+	const std::string FILENAME = "output_blue_intensive";  
 
 	// Set the output file. 
 	std::ofstream fout("output/ppm/" + FILENAME + ".ppm"); 
@@ -32,12 +39,24 @@ int main()
 		std::cerr << "\rScanLines Remaining: " << row << " " << std::flush;
 		for(int column = 0; column < WIDTH; ++column)
 		{
-			fout << rand() % 100 << " "; // Red Value. 
-			fout << rand() % 256 << " "; // Green Value.  
-			fout << rand() % 256 << "  "; // Blue Value. 
+			// Red Intensive. 
+			// fout << rand() % 255 << " "; // Red Value. 
+			// fout << rand() % 1 << " "; // Green Value.  
+			// fout << rand() % 1 << "  "; // Blue Value
+
+			// Green Intensive. 
+			// fout << rand() % 1 << " "; // Red Value. 
+			// fout << rand() % 255 << " "; // Green Value.  
+			// fout << rand() % 1 << "  "; // Blue Value
+
+			// Blue Intensive. 
+			fout << rand() % 1 << " "; // Red Value. 
+			fout << rand() % 1 << " "; // Green Value.  
+			fout << rand() % 255 << "  "; // Blue Value
 		}
 		fout << "\n"; // New Line.
 	}
 	std::cerr << "\nDONE!\n"; 
 	return 0; // Return No Error. 
 } 
+
