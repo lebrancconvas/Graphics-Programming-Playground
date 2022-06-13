@@ -1,4 +1,5 @@
 // Ref: https://www.youtube.com/watch?v=12IbpyFiIYE 
+#include <iostream>
 #include <fstream>
 
 int main()
@@ -21,6 +22,7 @@ int main()
 
 	for(int row = 0; row < HEIGHT; row++)
 	{
+		std::cerr << "\rScanLines Remaining: " << row << " " << std::flush;
 		for(int column = 0; column < WIDTH; ++column)
 		{
 			fout << rand() % 256 << " "; // Red Value. 
@@ -29,6 +31,6 @@ int main()
 		}
 		fout << "\n"; // New Line.
 	}
-
+	std::cerr << "\nDONE!\n"; 
 	return 0; // Return No Error. 
 } 
