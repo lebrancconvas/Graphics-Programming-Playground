@@ -13,7 +13,7 @@ int main()
 	const int WIDTH = 800;
 	const int HEIGHT = 600;
 	const int MAX_COLOR = 255;
-	const std::string FILENAME = "output_08"; 
+	const std::string FILENAME = "output_09"; 
 
 	// Set the output file. 
 	std::ofstream fout("output/ppm/" + FILENAME + ".ppm"); 
@@ -32,9 +32,9 @@ int main()
 		std::cerr << "\rScanLines Remaining: " << row << " " << std::flush;
 		for(int column = 0; column < WIDTH; ++column)
 		{
-			fout << rand() % 256 << " "; // Red Value. 
+			fout << rand() % 100 << " "; // Red Value. 
 			fout << rand() % 256 << " "; // Green Value.  
-			fout << rand() % 100 << "  "; // Blue Value. 
+			fout << rand() % 256 << "  "; // Blue Value. 
 		}
 		fout << "\n"; // New Line.
 	}
